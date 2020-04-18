@@ -5,7 +5,7 @@ import * as Font from "expo-font"
 import ReviewDetails from "./screens/ReviewDetails"
 import About from "./screens/About"
 import { AppLoading } from "expo"
-import Navigator from "./routes/homeStack"
+import Navigator from "./routes/drawer"
 
 const getFonts = () => {
   return Font.loadAsync({
