@@ -5,7 +5,7 @@ import { globalStyles } from "../styles/globalStyles"
 export default function Home({ navigation }) {
 
     const [reviews, setReviews] = useState([
-        {title: "Zelda", rating: 5, body: "lorem ipsum", id: 1},
+        {title: "Zelsda", rating: 5, body: "lorem ipsum", id: 1},
         {title: "Call Of Duty", rating: 4, body: "lorem ipsum", id: 2},
         {title: "GTA 5", rating: 3, body: "lorem ipsum", id: 3},
     ])

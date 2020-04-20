@@ -1,24 +1,9 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from "@react-navigation/stack"
 import About from "../screens/About"
-
-// const screens = {
-//     About: {
-//         screen: About,
-//         navigationOptions: {
-//             title: "About GameZone",
-//         }
-//     }
-// }
-
-// const AboutStack = createStackNavigator(screens, {
-//   defaultNavigationOptions: {
-//     headerTintColor: '#444',
-//     headerStyle: { backgroundColor: '#eee', height: 60 },
-//   }
-// });
-
-// export default AboutStack
+import React, { useState } from 'react';
+import ReviewDetails from "../screens/ReviewDetails"
+import Header from "../shared/header"
 
 const Stack = createStackNavigator()
 
@@ -31,14 +16,17 @@ function AboutStack() {
         <Stack.Screen 
             name='About' 
             component={About}
-            options={{ 
-                title: 'About', 
-                headerTintColor: "#444",
-                headerStyle: {
-                    backgroundColor: '#eee', 
-                    height: 60
+            options={ ({ navigation }) => {
+                return {
+                    header: () => <Header navigation={navigation} title="About GameZone" />,
+                    title: 'About GameZone', 
+                    headerTintColor: "#444",
+                    headerStyle: {
+                        backgroundColor: '#eee', 
+                        
+                    }
                 }
-             }}
+            }}
             
         />
         <Stack.Screen 
