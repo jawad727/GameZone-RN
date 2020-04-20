@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import * as Font from "expo-font"
 import { AppLoading } from "expo"
-import HomeStack from "./routes/homeStack"
+import Drawer from "./routes/drawer"
 
 const getFonts = () => {
   return Font.loadAsync({
@@ -19,7 +19,7 @@ export default function App() {
 
     return ( 
 
-      <HomeStack/>
+      <Drawer/>
 
       )
   } else {

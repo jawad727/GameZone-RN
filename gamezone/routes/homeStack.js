@@ -9,7 +9,7 @@ const Stack = createStackNavigator()
 
 function HomeStack() {
   return (
-    <NavigationContainer>
+  
       <Stack.Navigator
         initialRouteName="Home"
       >
@@ -32,7 +32,7 @@ function HomeStack() {
             options={{ title: 'Review Details' }}
         />
       </Stack.Navigator>
-    </NavigationContainer>
+   
   )
 }
 
