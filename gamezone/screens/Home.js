@@ -10,9 +10,6 @@ export default function Home({ navigation }) {
         {title: "GTA 5", rating: 3, body: "lorem ipsum", id: 3},
     ])
 
-    const pressHandler = () => {
-        navigation.push("ReviewDetails")
-    }
 
     return (
         <View style={globalStyles.container}>
@@ -25,7 +22,6 @@ export default function Home({ navigation }) {
                     </TouchableOpacity>
                 )}
             />
-            <Button title="go to review details" onPress={pressHandler} />
         </View>
     )
 }

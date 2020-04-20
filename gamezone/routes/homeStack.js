@@ -1,31 +1,39 @@
-import { createStackNavigator } from "react-navigation-stack"
-import { createAppContainer } from "react-navigation"
+import React, { useState } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from "@react-navigation/stack"
 import Home from "../screens/Home"
 import ReviewDetails from "../screens/ReviewDetails"
 
-const screens = {
-    Home: {
-        screen: Home,
-        navigationOptions: {
-            title: "GameZone",
-        }
-    },
-    ReviewDetails: {
-        screen: ReviewDetails,
-        navigationOptions: {
-            title: "Review Details"
-        }
-    }
+
+const Stack = createStackNavigator()
+
+function HomeStack() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName="Home"
+      >
+        <Stack.Screen 
+            name='Home' 
+            component={Home}
+            options={{ 
+                title: 'Home', 
+                headerTintColor: "#444",
+                headerStyle: {
+                    backgroundColor: "#eee",
+                    height: 60
+                }
+             }}
+            
+        />
+        <Stack.Screen 
+            name="ReviewDetails" 
+            component={ReviewDetails}
+            options={{ title: 'Review Details' }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  )
 }
 
-const HomeStack = createStackNavigator(screens, {
-    defaultNavigationOptions: { // these are the default styles that show on everything unless individually overriden
-        headerTintColor: "#444",
-        headerStyle: {
-            backgroundColor: "#eee",
-            height: 60
-        }
-    }
-})
-
-export default createAppContainer(HomeStack)
+export default HomeStack

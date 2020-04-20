@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Home from "./screens/Home"
 import * as Font from "expo-font"
-import ReviewDetails from "./screens/ReviewDetails"
-import About from "./screens/About"
 import { AppLoading } from "expo"
-import Navigator from "./routes/drawer"
+import HomeStack from "./routes/homeStack"
 
 const getFonts = () => {
   return Font.loadAsync({
@@ -21,28 +18,22 @@ export default function App() {
   if (fontsLoaded) {
 
     return ( 
-      <Navigator/>
+
+      <HomeStack/>
+
       )
   } else {
 
     return (
-    <AppLoading // This component tells expo to keep the app loading screen until the component is fully rendered
-      startAsync={getFonts} 
-      onFinish={() => { // Once getFonts finishes set fontsLoaded to true which will take us off the loading screen and render the home component with the proper font
-      setFontsLoaded(true)
-    }} />  
+
+      <AppLoading // This component tells expo to keep the app loading screen until the component is fully rendered
+        startAsync={getFonts} 
+        onFinish={() => { // Once getFonts finishes set fontsLoaded to true which will take us off the loading screen and render the home component with the proper font
+        setFontsLoaded(true)
+      }} /> 
+
     )
-
   }
-  
-      
-     
-
-
-
-
-
-
 }
 
 const styles = StyleSheet.create({
