@@ -16,7 +16,7 @@ export default function Home({ navigation }) {
     ])
 
     const addReview = (review) => {
-        reviews.id = Math.random.toString()
+        review.id = Math.random().toString()
         setReviews((currentReviews) => {
 
             return [review, ...currentReviews]
@@ -24,7 +24,6 @@ export default function Home({ navigation }) {
         setModalOpen(false)
     }
 
-    console.log(reviews)
 
     return (
         
