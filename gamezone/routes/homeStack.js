@@ -4,6 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack"
 import Home from "../screens/Home"
 import ReviewDetails from "../screens/ReviewDetails"
 import Header from "../shared/header"
+import ThirdPage from "../screens/ThirdPage"
 
 
 const Stack = createStackNavigator()
@@ -33,6 +34,11 @@ function HomeStack() {
             name="ReviewDetails" 
             component={ReviewDetails}
             options={{ title: 'Review Details' }}
+        />
+        <Stack.Screen 
+            name="ThirdPage" 
+            component={ThirdPage}
+            options={{ title: 'ThirdPage' }}
         />
       </Stack.Navigator>
    

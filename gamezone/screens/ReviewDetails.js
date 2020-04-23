@@ -17,6 +17,7 @@ export default function ReviewDetails({navigation, route}) { // We get navigatio
                     <Image source={images.rating[rating]} />
                 </View>
             </Card>
+            <Button title="Home" onPress={() => navigation.navigate("ThirdPage")} />
         </View>
     )
 }
