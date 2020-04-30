@@ -18,7 +18,7 @@ function AboutStack() {
             component={About}
             options={ ({ navigation }) => {
                 return {
-                    header: () => <Header navigation={navigation} title="About GameZone" />,
+                    headerText: () => <Header navigation={navigation} title="About GameZone" />,
                     title: 'About GameZone', 
                     headerTintColor: "#444",
                     headerStyle: {

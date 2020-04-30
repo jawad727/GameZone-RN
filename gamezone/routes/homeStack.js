@@ -5,26 +5,27 @@ import Home from "../screens/Home"
 import ReviewDetails from "../screens/ReviewDetails"
 import Header from "../shared/header"
 import ThirdPage from "../screens/ThirdPage"
-
+import { StatusBar } from "react-native"
 
 const Stack = createStackNavigator()
 
-function HomeStack() {
+function HomeStack() { StatusBar
   return (
   
       <Stack.Navigator
         initialRouteName="Home"
       >
+        
         <Stack.Screen 
             name='Home' 
             component={Home}
             options={({ navigation }) => {
                 return {
+                  headerText: "asd",
                     header: () => <Header navigation={navigation} title="GameZone" />, 
                     headerTintColor: "#444",
                     headerStyle: {
-                        backgroundColor: "#eee",
-                        height: 60,    
+     
                     },
                 }
              }}

@@ -25,7 +25,7 @@ export default function ReviewForm({ addReview }) {
     return (
         <View style={globalStyles.container}>
             <Formik
-            initialValues={{title: "", body: "", rating: ""}}
+            initialValues={{title: "", body: "", rating: "", icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS5joTSfhtGz3w7AD8Gbq_MG1x54hpYdEQHYsTSNvIsaBQCa8h1&usqp=CAU"}}
             validationSchema={reviewSchema}
             onSubmit={(values, action) => {  
                 action.resetForm()     

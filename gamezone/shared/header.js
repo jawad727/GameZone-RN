@@ -9,6 +9,7 @@ export default function Header({ navigation, title }) {
     }
 
     return (
+        
         <ImageBackground style={styles.header} source={require("../assets/game_bg.png")}>
             <MaterialIcons name="menu" size={28} onPress={openMenu} style={styles.icon} />
             <View style={styles.headerTitle} >
@@ -25,7 +26,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "#eee",
-        height: 60
+        height: 65,
+        paddingTop: 25
     },
     headerText: {
         fontWeight: "bold",
@@ -35,7 +37,8 @@ const styles = StyleSheet.create({
     },
     icon: {
         position: "absolute",
-        left: 16
+        left: 16,
+        paddingTop: 25
     },
     headerImage: {
         width: 26,
