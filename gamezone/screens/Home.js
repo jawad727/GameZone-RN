@@ -53,6 +53,7 @@ export default function Home({ navigation }) {
             />
 
             <FlatList  
+                style={styles.listContainer}
                 data={reviews}
                 keyExtractor={(item) => item.id}
                 renderItem={({ item }) => ( 
@@ -106,5 +107,10 @@ const styles = StyleSheet.create({
     cardContainer: {
         flexDirection: "row",
         alignItems: "center"
+    },
+    listContainer: {
+        // borderWidth: 2,
+        // flex: 1,
+        // height: "100%",
     }
 })
